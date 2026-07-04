@@ -18,7 +18,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://lh3.googleusercontent.com">
 <link rel="preload" as="image" href="assets/hero-mockup.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@600;700&display=swap"></noscript>
+<link rel="dns-prefetch" href="https://chk.eduzz.com">
 <style>
 :root{
   --paper:#FAF6EB; --paper2:#F3EBD8; --ink:#3A2C1B; --ink-soft:#5C4A33;
@@ -30,6 +32,7 @@
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:var(--paper);color:var(--ink);font-size:18px;line-height:1.65;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
+picture{display:contents}
 .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
 .narrow{max-width:760px;margin:0 auto}
 h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.14;color:var(--ink)}
@@ -183,7 +186,6 @@ section{padding:74px 0;position:relative}
 .offer-price .por{font-family:'Playfair Display',serif;font-weight:900;color:var(--terra);font-size:clamp(2.6rem,7vw,3.6rem);line-height:1.05;margin:6px 0 2px}
 .offer-price .por small{font-size:1.15rem;font-family:'Nunito';font-weight:800;color:var(--ink-soft)}
 .offer-price .avista{font-weight:800;color:var(--olive-dk);margin-bottom:22px}
-.pizza{margin:18px auto 0;max-width:430px;font-size:.95rem;color:var(--ink-soft);background:rgba(200,154,75,.12);border-radius:14px;padding:12px 18px}
 /* ---------- garantia (carta) ---------- */
 .envelope{max-width:720px;margin:0 auto;background:#F1E4C8;border-radius:20px;padding:16px;box-shadow:var(--shadow);position:relative}
 .envelope::before{content:"";position:absolute;inset:16px 16px auto 16px;height:0;border-left:calc(50% - 16px) solid transparent;border-right:calc(50% - 16px) solid transparent;border-top:120px solid #E7D6B2;border-radius:8px;pointer-events:none;opacity:.55}
@@ -256,7 +258,11 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
       <div class="trustline"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4z"/></svg>Garantia de 7 dias · Download imediato · É só imprimir</div>
     </div>
     <div class="hero-img reveal">
-      <img src="assets/hero-mockup.jpg" alt="Kit Memórias de Férias no tablet e no celular, com as folhas impressas: envelopes de missões, devocional, pote das memórias e certificado" width="860" height="694" fetchpriority="high" decoding="sync">
+      <picture>
+        <source srcset="assets/hero-mockup-sm.webp" type="image/webp" media="(max-width:920px)">
+        <source srcset="assets/hero-mockup-sm.jpg" media="(max-width:920px)">
+        <img src="assets/hero-mockup.jpg" alt="Kit Memórias de Férias no tablet e no celular, com as folhas impressas: envelopes de missões, devocional, pote das memórias e certificado" width="860" height="694" fetchpriority="high" decoding="sync">
+      </picture>
       <div class="hero-note hand">tudo pronto: é só baixar e imprimir! ♥</div>
     </div>
   </div>
@@ -301,7 +307,11 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
 <!-- ============ IMAGINE ============ -->
 <section class="imagine">
   <div class="wrap grid2">
-    <img class="reveal" src="assets/capsula.jpg" alt="Pais escrevendo cartas para a cápsula do tempo da família" width="640" height="651" loading="lazy" decoding="async">
+    <picture>
+      <source srcset="assets/capsula-sm.webp" type="image/webp" media="(max-width:920px)">
+      <source srcset="assets/capsula-sm.jpg" media="(max-width:920px)">
+      <img class="reveal" src="assets/capsula.jpg" alt="Pais escrevendo cartas para a cápsula do tempo da família" width="640" height="651" loading="lazy" decoding="async">
+    </picture>
     <div class="reveal">
       <span class="eyebrow">Imagine a cena</span>
       <h2 style="margin-top:16px">Na última noite das férias, vocês abrem o <span class="olive">Pote das Memórias…</span></h2>
@@ -335,7 +345,7 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
     </div>
     <div class="kit-grid">
       <div class="kit-card reveal">
-        <img class="card-thumb" src="assets/th-envelopes.jpg" alt="31 envelopes de missão com lacre de coração" width="720" height="540" loading="lazy" decoding="async">
+        <picture><source srcset="assets/th-envelopes.webp" type="image/webp"><img class="card-thumb" src="assets/th-envelopes.jpg" alt="31 envelopes de missão com lacre de coração" width="720" height="540" loading="lazy" decoding="async"></picture>
         <h3>31 Missões em Envelopes</h3>
         <p>Um enigma por dia, pronto para o papai (ou você!) esconder antes do café. A criança acorda <b>correndo para a porta</b>, e a expectativa se renova todo dia (é por isso que ninguém "enjoa no segundo dia"). Irmãos de idades diferentes vivem a missão juntos.</p>
         <div class="val"><s>R$ 47</s> · incluso</div>
@@ -347,7 +357,7 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
         <div class="val"><s>R$ 37</s> · incluso</div>
       </div>
       <div class="kit-card reveal">
-        <img class="card-thumb" src="assets/th-pote.jpg" alt="Pote das memórias com bilhetes de gratidão" width="720" height="540" loading="lazy" decoding="async">
+        <picture><source srcset="assets/th-pote.webp" type="image/webp"><img class="card-thumb" src="assets/th-pote.jpg" alt="Pote das memórias com bilhetes de gratidão" width="720" height="540" loading="lazy" decoding="async"></picture>
         <h3>Kit "Pote das Memórias"</h3>
         <p>Rótulo, bilhetes de gratidão e o ritual de encerramento das férias. Um diário de gratidão em família, feito sem ninguém perceber.</p>
         <div class="val"><s>R$ 27</s> · incluso</div>
@@ -392,9 +402,9 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
       <p style="max-width:620px;margin:16px auto 0;color:var(--ink-soft)">Nada de material raso feito às pressas. Cada página foi diagramada com carinho, pronta para imprimir até em preto e branco.</p>
     </div>
     <div class="spy-grid">
-      <figure class="reveal"><img src="assets/espie-1.jpg" alt="Página real dos cartões de missão com charadas do dia" width="420" height="562" loading="lazy" decoding="async"><figcaption>Os cartões de missão, prontos para recortar</figcaption></figure>
-      <figure class="reveal"><img src="assets/espie-2.jpg" alt="Página real de um devocional com história, versículo e oração da criança" width="420" height="565" loading="lazy" decoding="async"><figcaption>Um devocional "do tamanho deles"</figcaption></figure>
-      <figure class="reveal"><img src="assets/espie-3.jpg" alt="Página real dos bilhetes de lancheira recortáveis" width="420" height="566" loading="lazy" decoding="async"><figcaption>Os bilhetes de lancheira do bônus</figcaption></figure>
+      <figure class="reveal"><picture><source srcset="assets/espie-1.webp" type="image/webp"><img src="assets/espie-1.jpg" alt="Página real dos cartões de missão com charadas do dia" width="420" height="562" loading="lazy" decoding="async"></picture><figcaption>Os cartões de missão, prontos para recortar</figcaption></figure>
+      <figure class="reveal"><picture><source srcset="assets/espie-2.webp" type="image/webp"><img src="assets/espie-2.jpg" alt="Página real de um devocional com história, versículo e oração da criança" width="420" height="565" loading="lazy" decoding="async"></picture><figcaption>Um devocional "do tamanho deles"</figcaption></figure>
+      <figure class="reveal"><picture><source srcset="assets/espie-3.webp" type="image/webp"><img src="assets/espie-3.jpg" alt="Página real dos bilhetes de lancheira recortáveis" width="420" height="566" loading="lazy" decoding="async"></picture><figcaption>Os bilhetes de lancheira do bônus</figcaption></figure>
     </div>
   </div>
 </section>
@@ -435,7 +445,7 @@ footer{background:var(--ink);color:#CBB998;text-align:center;padding:44px 22px;f
       <div class="bonus-card reveal">
         <span class="bonus-num">Bônus 4</span>
         <div class="obj">"E quando as férias acabarem?"</div>
-        <img class="card-thumb" src="assets/th-lancheira.jpg" alt="Bilhetes ilustrados para a lancheira" width="720" height="540" loading="lazy" decoding="async">
+        <picture><source srcset="assets/th-lancheira.webp" type="image/webp"><img class="card-thumb" src="assets/th-lancheira.jpg" alt="Bilhetes ilustrados para a lancheira" width="720" height="540" loading="lazy" decoding="async"></picture>
         <h3>Bilhetes de Lancheira "Volta às Aulas" 🍎</h3>
         <p>20 bilhetes ilustrados com versículos e palavras de bênção para colocar na lancheira nas primeiras semanas de aula. O hábito que vocês criaram nas férias continua, um bilhetinho de cada vez.</p>
         <div class="bval"><s>R$ 19</s><b>DE GRAÇA hoje</b></div>
