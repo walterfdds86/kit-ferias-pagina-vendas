@@ -14,6 +14,17 @@
 <meta property="og:image" content="https://kitferias.vercel.app/assets/og-image.jpg">
 <meta property="og:url" content="https://kitferias.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2278224902473279');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Kit Memórias de Férias',content_category:'Infoproduto',value:27.00,currency:'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2278224902473279&ev=PageView&noscript=1"/></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://lh3.googleusercontent.com">
@@ -661,6 +672,9 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 const sticky=document.querySelector('.sticky-cta');
 if(sticky){addEventListener('scroll',()=>{sticky.classList.toggle('show',scrollY>560)},{passive:true});}
+document.querySelectorAll('a[href*="eduzz.com"]').forEach(function(btn){
+  btn.addEventListener('click',function(){if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{value:27.00,currency:'BRL',num_items:1});});
+});
 </script>
 </body>
 </html>
